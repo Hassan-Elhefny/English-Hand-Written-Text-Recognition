@@ -1,0 +1,190 @@
+digraph g {
+	graph [nodesep=1 ranksep=2 splines=false]
+	edge [arrowhead=none color="#707070"]
+	subgraph cluster_input {
+		node [fillcolor="black:white" fontcolor=white shape=square style=filled]
+		color=white label="HandWritten Text Recognition
+
+
+
+Input Layer"
+		1 [label="Image
+ 32 x 32 pixels
+Grayscale" fontcolor=white]
+	}
+	conv_2 -> 2
+	1 -> conv_2
+	subgraph cluster_1 {
+		color="#5faad0" style=filled
+		conv_2 [label="Convolutional Layer
+Kernel Size: 1x1
+Filters: 32" shape=square]
+		2 [label="32
+Feature Maps" shape=square]
+	}
+	2 -> 3
+	subgraph cluster_2 {
+		color=white
+		3 [label="Max Pooling
+Pool Size: 2x2" fillcolor="#8e44ad" fontcolor=white style=filled]
+	}
+	conv_4 -> 4
+	3 -> conv_4
+	subgraph cluster_3 {
+		color="#5faad0" style=filled
+		conv_4 [label="Convolutional Layer
+Kernel Size: 3x3
+Filters: 64" shape=square]
+		4 [label="64
+Feature Maps" shape=square]
+	}
+	4 -> 5
+	subgraph cluster_4 {
+		color=white
+		5 [label="Max Pooling
+Pool Size: 2x2" fillcolor="#8e44ad" fontcolor=white style=filled]
+	}
+	conv_6 -> 6
+	5 -> conv_6
+	subgraph cluster_5 {
+		color="#5faad0" style=filled
+		conv_6 [label="Convolutional Layer
+Kernel Size: 3x3
+Filters: 128" shape=square]
+		6 [label="128
+Feature Maps" shape=square]
+	}
+	6 -> 7
+	subgraph cluster_6 {
+		color=white
+		7 [label="Max Pooling
+Pool Size: 2x2" fillcolor="#8e44ad" fontcolor=white style=filled]
+	}
+	7 -> 8
+	subgraph cluster_7 {
+		color=white
+		8 [label="Dropout Layer" fillcolor="#f39c12" fontcolor=white style=filled]
+	}
+	8 -> 9
+	subgraph cluster_8 {
+		color=white
+		9 [label=Flattening fillcolor="#2c3e50" fontcolor=white shape=invtriangle style=filled]
+	}
+	9 -> 10
+	9 -> 11
+	9 -> 12
+	9 -> 13
+	9 -> 14
+	9 -> 15
+	9 -> 16
+	9 -> 17
+	9 -> 18
+	9 -> 19
+	subgraph cluster_9 {
+		color=white
+		rank=same
+		label=" (+118)" labeljust=right labelloc=b
+		10 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		11 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		12 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		13 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		14 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		15 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		16 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		17 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		18 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+		19 [color="#3498db" fontcolor="#3498db" shape=circle style=filled]
+	}
+	10 -> 20
+	11 -> 20
+	12 -> 20
+	13 -> 20
+	14 -> 20
+	15 -> 20
+	16 -> 20
+	17 -> 20
+	18 -> 20
+	19 -> 20
+	subgraph cluster_10 {
+		color=white
+		20 [label="Dropout Layer" fillcolor="#f39c12" fontcolor=white style=filled]
+	}
+	20 -> 21
+	20 -> 22
+	20 -> 23
+	20 -> 24
+	20 -> 25
+	20 -> 26
+	20 -> 27
+	20 -> 28
+	20 -> 29
+	20 -> 30
+	20 -> 31
+	20 -> 32
+	20 -> 33
+	20 -> 34
+	20 -> 35
+	20 -> 36
+	20 -> 37
+	20 -> 38
+	20 -> 39
+	20 -> 40
+	20 -> 41
+	20 -> 42
+	20 -> 43
+	20 -> 44
+	20 -> 45
+	20 -> 46
+	20 -> 47
+	20 -> 48
+	20 -> 49
+	20 -> 50
+	20 -> 51
+	20 -> 52
+	20 -> 53
+	20 -> 54
+	20 -> 55
+	subgraph cluster_output {
+		node [color="#2ecc71" fontcolor="#2ecc71" shape=circle style=filled]
+		color=white
+		rank=same
+		labeljust=1
+		21 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		22 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		23 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		24 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		25 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		26 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		27 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		28 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		29 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		30 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		31 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		32 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		33 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		34 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		35 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		36 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		37 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		38 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		39 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		40 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		41 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		42 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		43 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		44 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		45 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		46 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		47 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		48 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		49 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		50 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		51 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		52 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		53 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		54 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		55 [color="#e74c3c" fontcolor="#e74c3c" shape=circle style=filled]
+		label="Output Layer" labelloc=bottom
+	}
+	arrowShape=none
+}
